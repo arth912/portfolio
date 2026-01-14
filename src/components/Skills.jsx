@@ -28,8 +28,8 @@ const Skills = () => {
       color: 'from-red-500 to-red-700'
     },
     {
-      title: 'AI/ML & Other Technologies',
-      skills: ['YOLOv8', 'OpenCV', 'Computer Vision', 'Deep Learning', 'Redis', 'RabbitMQ', 'Selenium', 'Web Scraping', 'BeautifulSoup', 'Pandas'],
+      title: 'Other Technologies',
+      skills: ['YOLOv8', 'Redis', 'RabbitMQ', 'Selenium', 'Web Scraping', 'BeautifulSoup', 'Pandas'],
       color: 'from-indigo-500 to-indigo-700'
     },
   ];
