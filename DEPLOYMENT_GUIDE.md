@@ -140,8 +140,10 @@ Free hosting directly from your GitHub repository.
 
 5. **Enable GitHub Pages:**
    - Go to repository **Settings** → **Pages**
-   - Source: **gh-pages branch**
-   - Save
+   - Under **Build and deployment** → **Source**, choose one of the following options:
+     - **GitHub Actions**: select this to let a workflow build and publish your site automatically (use a workflow like the example in the "Continuous Deployment" section above).
+     - **Deploy from a branch**: select this to publish directly from a branch (commonly the `gh-pages` branch). If you use the `gh-pages` package (`npm run deploy`), set the source branch to `gh-pages` and the folder to `/` (root).
+   - Click **Save** to apply the setting
 
 ---
 

@@ -3,9 +3,10 @@ import { Download, Mail, Github, Linkedin, ExternalLink } from 'lucide-react';
 
 const Hero = () => {
   const handleDownloadResume = () => {
-    // Download the actual PDF resume
+    // Download the actual PDF resume (use Vite base URL so it works on subpath deployments)
+    const base = import.meta.env.BASE_URL || '/';
     const link = document.createElement('a');
-    link.href = '/Arth_Rathod_Resume_MERN_Stack.pdf';
+    link.href = `${base}Arth_Rathod_Resume_MERN_Stack.pdf`;
     link.download = 'Arth_Rathod_Resume_MERN_Stack.pdf';
     document.body.appendChild(link);
     link.click();
@@ -95,7 +96,7 @@ const Hero = () => {
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
                 <div className="w-full h-full rounded-full overflow-hidden shadow-2xl ring-4 ring-white dark:ring-gray-800 ring-offset-4 ring-offset-primary-100 dark:ring-offset-gray-900">
                   <img 
-                    src="/images/profile.jpg" 
+                    src={`${import.meta.env.BASE_URL || '/'}images/profile.jpg`} 
                     alt="Arth Rathod - Full Stack Developer" 
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                   />
